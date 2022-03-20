@@ -5,6 +5,7 @@ import net.corda.core.contracts.Command
 import net.corda.core.contracts.UniqueIdentifier
 import net.corda.core.flows.*
 import net.corda.core.identity.Party
+import net.corda.core.node.StatesToRecord
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 import net.corda.core.utilities.ProgressTracker
@@ -57,9 +58,9 @@ object BuyFlow {
 
             progressTracker.currentStep = FINALISING_TRANSACTION
             val spectatorSession: FlowSession = initiateFlow(this.spectator)
-            return subFlow(
-                FinalityFlow(fullySignedTx, setOf(spectatorSession), FINALISING_TRANSACTION.childProgressTracker())
-            )
+            val notarised: SignedTransaction = subFlow(FinalityFlow(fullySignedTx, listOf(spectatorSession)))
+            serviceHub.recordTransactions(StatesToRecord.ALL_VISIBLE,listOf(notarised))
+            return notarised
 //            TODO("Not yet implemented")
 
         }

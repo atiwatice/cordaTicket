@@ -47,15 +47,15 @@ class TicketContract: Contract {
 
             val input = inputs[0]
             val output = outputs[0]
-            "Input's Issuer should be equals to output's Issuer" using (input.issuer == output.spectator)
-            "Input's Spectator and output's Spectator can't be equals" using (input.spectator != output.spectator)
-            "Section has to be conserved in the transfer" using (input.section == output.section)
-            "LinearId has to be conserved in the transfer" using (input.linearId == output.linearId)
-            var signers: Iterable<Party> = listOf<Party>(input.spectator,output.spectator)
-            "input's spectator and output's spectator have to signed" using (
-                    commandTicket.signers
-                        .containsAll(signers.asSequence().asStream().map{it.owningKey}.collect(Collectors.toSet()))
-                    )
+            "Input's Issuer should be equals to output's Issuer" using (input.issuer.equals(output.issuer) )
+            "Input's Spectator and output's Spectator can't be equals" using (!(input.spectator.equals(output.spectator)))
+            "Section has to be conserved in the transfer" using (input.section.equals(output.section) )
+            "LinearId has to be conserved in the transfer" using (input.linearId.equals(output.linearId) )
+            var signerInOutSpectator: Iterable<Party> = listOf<Party>(input.spectator,output.spectator)
+//            "input's spectator and output's spectator have to signed" using (
+//                    commandTicket.signers
+//                        .containsAll(listOf(input.spectator.owningKey))
+//                    )
         }else if(commandTicket.value is Commands.Exit){
             //Constraint 1 Inputs = 1
             "Only 1 input can be exit" using (inputs.size==1)

@@ -45,7 +45,7 @@ object ExitFlow {
         }
 
         override val progressTracker = tracker()
-
+        @Suspendable
         override fun call(): SignedTransaction {
             progressTracker.currentStep = GENERATE_TRANSACTION
             val assetCriteria = QueryCriteria.LinearStateQueryCriteria(

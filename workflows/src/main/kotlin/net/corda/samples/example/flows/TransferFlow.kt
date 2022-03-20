@@ -1,5 +1,6 @@
 package net.corda.samples.example.flows
 
+import co.paralleluniverse.fibers.Suspendable
 import net.corda.core.contracts.*
 import net.corda.core.flows.*
 import net.corda.core.identity.Party
@@ -38,6 +39,7 @@ object TransferFlow {
         }
 
         override val progressTracker = tracker()
+        @Suspendable
         override fun call(): SignedTransaction {
             progressTracker.currentStep = GENERATE_TRANSACTION
             val assetCriteria =
@@ -114,7 +116,7 @@ object TransferFlow {
 
 
         override val progressTracker = tracker()
-
+        @Suspendable
         override fun call(): SignedTransaction {
             progressTracker.currentStep = SIGNING_TRANSACTION
             class SignTxFlow : SignTransactionFlow {
