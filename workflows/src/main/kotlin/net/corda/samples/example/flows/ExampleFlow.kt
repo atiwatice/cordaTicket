@@ -1,7 +1,6 @@
 package net.corda.samples.example.flows
 
 import co.paralleluniverse.fibers.Suspendable
-import net.corda.samples.example.flows.ExampleFlow.Acceptor
 import net.corda.samples.example.flows.ExampleFlow.Initiator
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
