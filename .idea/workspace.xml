@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7dca983-4c90-400c-88a7-f2f2d63bde2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/src/main/kotlin/net/corda/samples/example/webserver/ControllerTicket.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/src/test/kotlin/net/corda/samples/example/contracts/ContractBuyTests.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows/src/test/kotlin/net/corda/samples/example/FlowTicketTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/net/corda/samples/example/flows/ExampleFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/net/corda/samples/example/flows/ExampleFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/net/corda/samples/example/flows/BuyFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/net/corda/samples/example/flows/BuyFlow.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/workflows/src/test/kotlin/net/corda/samples/example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../corda/samples-kotlin/Accounts/supplychain" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -121,7 +116,29 @@
       <command value="gradlew clean :deployNodes" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TicketFlowTests">
+  <component name="RunManager" selected="Gradle.cordapp-kotlin-ticket2 [clean :deployNodes]">
+    <configuration name="cordapp-kotlin-ticket2 [clean :deployNodes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value=":deployNodes" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TicketFlowTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cordapp-kotlin-ticket2.workflows.test" />
       <shortenClasspath name="MANIFEST" />
@@ -212,24 +229,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketFlowTests.flow rejects invalid IOUs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cordapp-kotlin-ticket2.workflows.test" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.corda.samples.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.corda.samples.example" />
-      <option name="MAIN_CLASS_NAME" value="net.corda.samples.example.TicketFlowTests" />
-      <option name="METHOD_NAME" value="flow rejects invalid IOUs" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea -javaagent:../libs/quasar-0.1.1.jar" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TicketFlowTests.recorded transaction has no inputs and a single output, the input Ticket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cordapp-kotlin-ticket2.workflows.test" />
       <shortenClasspath name="MANIFEST" />
@@ -257,11 +256,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.cordapp-kotlin-ticket2 [clean :deployNodes]" />
         <item itemvalue="JUnit.TicketFlowTests" />
         <item itemvalue="JUnit.TicketFlowTests.recorded transaction has no inputs and a single output, the input Ticket" />
         <item itemvalue="JUnit.TicketFlowTests.flow records a transaction in both parties' transaction storages" />
         <item itemvalue="JUnit.TicketFlowTests.SignedTransaction returned by the flow is signed by the initiator" />
-        <item itemvalue="JUnit.TicketFlowTests.flow rejects invalid IOUs" />
       </list>
     </recent_temporary>
   </component>

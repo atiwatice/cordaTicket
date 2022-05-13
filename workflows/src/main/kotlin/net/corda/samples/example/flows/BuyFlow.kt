@@ -46,7 +46,7 @@ object BuyFlow {
 
             //Create the transaction
             progressTracker.currentStep = GENERATE_TRANSACTION
-            val output = TicketState(issuer, this.spectator, this.section, UniqueIdentifier())
+            val output = TicketState(issuer, this.spectator, this.section)
             val commandBuy = Command(TicketContract.Commands.Buy(), issuer.owningKey)
             val txBuilder = TransactionBuilder(notary).addCommand(commandBuy).addOutputState(output, TicketContract.ID)
 
